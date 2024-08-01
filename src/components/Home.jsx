@@ -8,6 +8,9 @@ import Typed from 'typed.js'
 
 const Home = () => {
 
+
+ 
+
     const scroll = (id) => {
         const page = document.getElementById(id);
 
@@ -21,7 +24,7 @@ const Home = () => {
 
     React.useEffect(() => {
       const typed = new Typed(el.current, {
-        strings: ['Front end Developer.', 'First year College Student'],
+        strings: ['Front end Developer.', 'Web developer'],
         typeSpeed: 50,
       });
   
