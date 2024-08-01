@@ -8,7 +8,7 @@ import { BsListNested } from "react-icons/bs";
 import { IoIosClose } from "react-icons/io";
 
 
-const Navbar = () => {
+const Navbar = ({ scrollToSection, homeRef, aboutRef, projectsRef, contactsRef}) => {
 
     const [showNav, setShowNav] = useState(false);
   return (
@@ -16,19 +16,18 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 h-full  flex-col justify-between w-20 py-10 ml-10 hidden lg:flex ">
         <a className='text-4xl text-white ' href="/"><PiFinnTheHumanFill /></a>
         <ul className=" text-3xl text-white relative   ">
-
             <li className="" >
-                  <button onClick={()=> { scroll("home")}} ><IoMdHome /></button>
+                  <button onClick={()=> {scrollToSection(homeRef)}} ><IoMdHome /></button>
                 </li >
             <li className=''>
-                <button  onClick={()=> { scroll("about")}}><FaCircleUser /></button>
+                <button onClick={()=> {scrollToSection(aboutRef)}}><FaCircleUser /></button>
             </li >
 
              <li className=''>
-                 <button onClick={()=> { scroll("portfolio")}}><IoIosBriefcase /></button>
+                 <button onClick={()=> {scrollToSection(projectsRef)}} ><IoIosBriefcase /></button>
              </li>
               <li>
-                 <button onClick={()=> { scroll("contacts")}}><BiSolidContact /> </button>
+                 <button onClick={()=> {scrollToSection(contactsRef)}}><BiSolidContact /> </button>
             </li>
         </ul>
     </nav>
@@ -44,25 +43,25 @@ const Navbar = () => {
         <div className='flex flex-col gap-6 mt-40'>
 
             <div>
-                <button Click={() => scroll("home")} className='flex items-center text-xl gap-2'>
+                <button onClick={()=> {scrollToSection(homeRef)}}  className='flex items-center text-xl gap-2'>
                 <IoMdHome />
                     Home
                 </button>
             </div>
             <div>
-                <button Click={() => scroll("about")} className='flex items-center text-xl gap-2'>
+                <button onClick={()=> {scrollToSection(aboutRef)}}  className='flex items-center text-xl gap-2'>
                 <FaCircleUser />
                     About
                 </button>
             </div>
             <div>
-                <button Click={() => scroll("about")} className='flex items-center text-xl gap-2'>
+                <button onClick={()=> {scrollToSection(projectsRef)}}  className='flex items-center text-xl gap-2'>
                 <IoIosBriefcase />
                     Projects
                 </button>
             </div>
             <div>
-                <button Click={() => scroll("about")} className='flex items-center text-xl gap-2'>
+                <button onClick={()=> {scrollToSection(contactsRef)}}  className='flex items-center text-xl gap-2'>
                 <BiSolidContact />
                     Contact
                 </button>

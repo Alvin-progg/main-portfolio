@@ -6,25 +6,17 @@ import Typed from 'typed.js'
 
 
 
-const Home = () => {
+const Home = React.forwardRef((props, ref) => {
 
 
  
 
-    const scroll = (id) => {
-        const page = document.getElementById(id);
-
-
-        if (page) {
-            sect.scrollIntoView({behavior:'smooth'});
-        }
-    }
 
     const el = React.useRef(null);
 
     React.useEffect(() => {
       const typed = new Typed(el.current, {
-        strings: ['Front end Developer.', 'Web developer'],
+        strings: ['Front end Developer.', 'Web developer.'],
         typeSpeed: 50,
       });
   
@@ -35,13 +27,13 @@ const Home = () => {
     }, []);
 
 
-  
+
 
 
   return (
 
-    <main id='home' className='h-screen lg:flex-row flex-col '>
-        <Navbar  scroll={scroll}/>
+    <main id='home' className='h-screen lg:flex-row flex-col  ' ref={ref}>
+        
         <section className='flex flex-1 lg:px-0 px-4 items-center justify-center '>
 
           <div>
@@ -59,6 +51,6 @@ const Home = () => {
         </section>
     </main>
   )
-}
+});
 
 export default Home
