@@ -21,7 +21,7 @@ const Home = () => {
 
     React.useEffect(() => {
       const typed = new Typed(el.current, {
-        strings: ['Front end Developer.', 'First year College'],
+        strings: ['Front end Developer.', 'First year College Student'],
         typeSpeed: 50,
       });
   
