@@ -41,16 +41,30 @@ const Navbar = () => {
     <nav className={`fixed top-0 right-0 h-full w-[200px] py-10 pl-5 lg:hidden bg-white ${showNav ? "block" : "hidden"} `}>
 
         <button className='text-5xl text-black' onClick={ ()=> { setShowNav(!showNav)}}><IoIosClose /></button>
-        <div className='flex flex-col gap-6'>
+        <div className='flex flex-col gap-6 mt-40'>
 
             <div>
                 <button Click={() => scroll("home")} className='flex items-center text-xl gap-2'>
+                <IoMdHome />
                     Home
                 </button>
             </div>
             <div>
                 <button Click={() => scroll("about")} className='flex items-center text-xl gap-2'>
+                <FaCircleUser />
                     About
+                </button>
+            </div>
+            <div>
+                <button Click={() => scroll("about")} className='flex items-center text-xl gap-2'>
+                <IoIosBriefcase />
+                    Projects
+                </button>
+            </div>
+            <div>
+                <button Click={() => scroll("about")} className='flex items-center text-xl gap-2'>
+                <BiSolidContact />
+                    Contact
                 </button>
             </div>
 
