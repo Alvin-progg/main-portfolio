@@ -17,7 +17,10 @@ const Home = React.forwardRef((props, ref) => {
     React.useEffect(() => {
       const typed = new Typed(el.current, {
         strings: ['Front end Developer.', 'Web developer.'],
-        typeSpeed: 50,
+        typeSpeed: 100,
+        loop: true,
+        
+        backDelay: 5000,
       });
   
       return () => {
