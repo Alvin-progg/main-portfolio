@@ -25,7 +25,8 @@ const Projects =  React.forwardRef((props, ref) => {
   return (
 
     <main className='flex-col lg:flex flex-1 items-center justify-center h-screen' ref={ref}>
-      <div className='' data-aos="fade-up" data-aos-delay="200">
+      <div className='mt-50' data-aos="fade-up" data-aos-delay="200">
+        <span className='text-white text-3xl lg:text-5xl items-center lg:ml-48 justify-center ml-28 mb-20 mt-30'>My Projects</span>
         <Carousel data={data}/>
       </div>
     </main>

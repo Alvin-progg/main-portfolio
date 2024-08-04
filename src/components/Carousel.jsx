@@ -13,7 +13,7 @@ const Carousel = ({ data }) => {
   };
 
   return (
-    <Slider {...settings} className='lg:w-[700px] lg:h-[400px] absolute overflow-hidden lg:overflow-visible'>
+    <Slider {...settings} className='lg:w-[700px] lg:h-[400px] mt-36 absolute overflow-hidden lg:overflow-visible'>
       {data.map((project) => (
         <div key={project.id} className="flex justify-center">
           <div className="w-3/4 m-auto border-white border rounded-xl  p-4 gap-4 ">
