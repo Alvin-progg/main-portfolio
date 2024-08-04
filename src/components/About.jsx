@@ -1,10 +1,13 @@
 import React from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 import Techstack from './Techstack';
 
 const About = React.forwardRef((props, ref) => {
+  AOS.init();
   return (
-    <main id='about' className='h-screen  flex-1 flex just ify-center items-center px-4 lg:px-0' ref={ref}>
-        <div className='flex flex-col   lg:mx-44 gap-7'>
+    <main id='about' className='h-screen  flex-1 flex justify-center items-center px-4 lg:px-0' ref={ref}>
+        <div className='flex flex-col  lg:mx-44 gap-7' data-aos="fade-right">
             <span className='text-4xl text-gray-500'>Hi i Am <span className='font-bold text-white'>Alvin</span></span>
             <span className='text-3xl text-gray-500'>I have a passion for building minimalist websites. When I'm not immersed in web development, you'll find me enjoying workouts, learning new programming languages, or cycling through scenic routes.</span>
             <div className="flex flex-col gap-4 ">

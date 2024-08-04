@@ -30,14 +30,6 @@ const Techstack = () => {
             icon: FaGitAlt
         }, 
         {
-            id: 7,
-            language: "MongoDB",
-            icon: DiMongodb
-        }, {
-            id: 8,
-            language: "Next.js",
-            icon: RiNextjsFill
-        }, {
             id: 9,
             language: "Linux",
             icon: FaLinux
