@@ -10,6 +10,9 @@ const Carousel = ({ data }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000, // 2 seconds
+    pauseOnHover: true, // Pauses auto-scroll when hovering over a slide
   };
 
   return (
